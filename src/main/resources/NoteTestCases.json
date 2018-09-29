@@ -1,0 +1,146 @@
+{
+	"Note_SuccessfulNote_test1": {
+		"request": {
+			"url": "/notes/create",
+			"headers": {
+				"UserId": "5b9e23e1bf9fb74b3a7a56b9"
+			},
+			"body": {
+				"archive": false,
+				"colour": "Yellow",
+				"description": "Hello World",
+				"listOfLabel": [
+					"Hello"
+				],
+				"pin": true,
+				"reminder": "01/12/2018 01:00:00",
+				"title": "Hello"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "CREATED",
+			"headers": {
+				
+			}
+		}
+	},
+	"Note_SuccessfulNote_test2": {
+		"request": {
+			"url": "/notes/create",
+			"headers": {
+				"UserId": [
+					"5b9e23e1bf9fb74b3a7a56b9"
+				]
+			},
+			"body": {
+				"archive": false,
+				"colour": "Yellow",
+				"description": "",
+				"listOfLabel": [
+					"Hello"
+				],
+				"pin": true,
+				"reminder": "01/12/2018 01:00:00",
+				"title": "Hello"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "CREATED",
+			"headers": {
+				
+			}
+		}
+	},
+	"Note_SuccessfulNote_test3": {
+		"request": {
+			"url": "/notes/create",
+			"headers": {
+				"userId": "5b9e23e1bf9fb74b3a7a56b9"
+			},
+			"body": {
+				"archive": false,
+				"colour": "Yellow",
+				"description": "Hello World",
+				"listOfLabel": [
+					"Hello"
+				],
+				"pin": true,
+				"reminder": "01/12/2018 01:00:00",
+				"title": ""
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "CREATED",
+			"headers": {
+				
+			}
+		}
+	},
+	"User_CreateNote_test1": {
+		"request": {
+			"url": "/notes/create",
+			"headers": {
+				"userId": [
+					"5b98bd6283346c3699956939"
+				]
+			},
+			"body": {
+				"archive": false,
+				"colour": "red",
+				"description": "",
+				"listOfLabel": [
+					"Hello"
+				],
+				"pin": true,
+				"reminder": "01/12/2018 01:00:00",
+				"title": ""
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Title ,Description cannot be empty",
+				"status": 91
+			}
+		}
+	},
+	"User_Remainder_test1": {
+		"request": {
+			"url": "/notes/create",
+			"headers": {
+				"userId": [
+					"5b98bd6283346c3699956939"
+				]
+			},
+			"body": {
+				"archive": false,
+				"colour": "red",
+				"description": "hii",
+				"listOfLabel": [
+					"Hello"
+				],
+				"pin": true,
+				"reminder": "01/09/2018 01:00:00",
+				"title": "create"
+			},
+			"method": "POST"
+		},
+		"response": {
+			"status": "BAD_REQUEST",
+			"headers": {
+				
+			},
+			"body": {
+				"message": "Date and time should be current date and time or after",
+				"status": 4
+			}
+		}
+	}
+}
